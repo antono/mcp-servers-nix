@@ -42,6 +42,7 @@ in
 
   # community servers
   google-calendar-mcp = pkgs.callPackage ./community/google-calendar-mcp { };
+  mcp-logseq = pkgs.callPackage ./community/mcp-logseq.nix { };
   clickup-mcp-server = warnRemoved "clickup-mcp-server has been removed since upstream stopped distribution and switched to shareware";
   fibery-mcp-server = pkgs.callPackage ./community/fibery-mcp-server { };
 }
