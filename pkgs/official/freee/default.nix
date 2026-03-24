@@ -12,20 +12,20 @@
 
 stdenvNoCC.mkDerivation (finalAttrs: {
   pname = "freee-mcp";
-  version = "0.9.1";
+  version = "0.12.1";
 
   src = fetchFromGitHub {
     owner = "freee";
     repo = "freee-mcp";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-lxRNUhMUv7CGp9KuhGaAm2cQ2xhwwlUtkomXn2QaAu4=";
+    hash = "sha256-n6pADwrofMPD30KHP7hCLPGF2OiaedsSDG89JZkDWeA=";
   };
 
   pnpmDeps = fetchPnpmDeps {
     inherit (finalAttrs) pname version src;
     pnpm = pnpm_10;
     fetcherVersion = 3;
-    hash = "sha256-o5MTWNsGBrU8ErVcu59qCX/zgZ25pXe4ZWN0Y6T0Yng=";
+    hash = "sha256-0ocvfqTkaj7+BY9p+rs89juV2X6TJCrAUgTJoIGv1W4=";
   };
 
   nativeBuildInputs = [
