@@ -1,4 +1,9 @@
-{ config, lib, mkServerModule, ... }:
+{
+  config,
+  lib,
+  mkServerModule,
+  ...
+}:
 let
   cfg = config.programs.fibery;
 in

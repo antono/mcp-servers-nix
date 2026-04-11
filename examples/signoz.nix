@@ -6,7 +6,10 @@
       SIGNOZ_URL = "https://your-tenant.signoz.cloud";
     };
     passwordCommand = {
-      SIGNOZ_API_KEY = [ "pass" "mcp/signoz" ];
+      SIGNOZ_API_KEY = [
+        "pass"
+        "mcp/signoz"
+      ];
     };
   };
 }
