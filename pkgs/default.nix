@@ -42,6 +42,9 @@ in
   signoz-mcp-server = pkgs.callPackage ./official/signoz { };
   slite-mcp-server = pkgs.callPackage ./official/slite { };
 
+  # official servers
+  argocd-mcp = pkgs.callPackage ./official/argocd-mcp { };
+
   # community servers
   google-calendar-mcp = pkgs.callPackage ./community/google-calendar-mcp { };
   mcp-logseq = pkgs.callPackage ./community/mcp-logseq.nix { };

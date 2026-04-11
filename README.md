@@ -70,6 +70,7 @@ The output format adapts to the `flavor` option — see [Supported Flavors](#sup
 
 ## Available Modules
 
+- [argocd](./modules/servers/argocd.nix)
 - [chrome-devtools](./modules/servers/chrome-devtools.nix)
 - [clickup](./modules/servers/clickup.nix)
 - [codex](./modules/servers/codex.nix)
