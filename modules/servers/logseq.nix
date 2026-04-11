@@ -1,4 +1,9 @@
 { mkServerModule, ... }:
 {
-  imports = [ (mkServerModule { name = "logseq"; packageName = "mcp-logseq"; }) ];
+  imports = [
+    (mkServerModule {
+      name = "logseq";
+      packageName = "mcp-logseq";
+    })
+  ];
 }
