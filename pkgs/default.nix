@@ -24,7 +24,6 @@ in
     workspace = "sequentialthinking";
   }) { };
   mcp-server-time = pkgs.callPackage ./reference/time.nix { };
-
   # official servers
   context7-mcp = pkgs.callPackage ./official/context7 { };
   deepl-mcp-server = pkgs.callPackage ./official/deepl { };
@@ -40,12 +39,10 @@ in
   github-mcp-server = warnRemoved "github-mcp-server has been removed since it is now available in the nixpkgs 25.11 stable release";
   serena = pkgs.callPackage ./official/serena { };
   signoz-mcp-server = pkgs.callPackage ./official/signoz { };
-  slite-mcp-server = pkgs.callPackage ./official/slite { };
+  slite-mcp-server = warnRemoved "slite-mcp-server has been removed since upstream stopped distribution in favor of the hosted MCP server at https://api.slite.com/mcp";
 
-  # official servers
+  # mcp-servers-nix-plus
   argocd-mcp = pkgs.callPackage ./official/argocd-mcp { };
-
-  # community servers
   google-calendar-mcp = pkgs.callPackage ./community/google-calendar-mcp { };
   mcp-logseq = pkgs.callPackage ./community/mcp-logseq.nix { };
   chrome-devtools-mcp = pkgs.callPackage ./community/chrome-devtools { };
