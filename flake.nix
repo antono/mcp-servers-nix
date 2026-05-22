@@ -68,7 +68,10 @@
           # exclude example-signoz from checks to avoid requiring external tenant config
           lib.removeAttrs examples [ "example-signoz" ]
         ))
-        (forAllSystems (
+        # module-options-doc is Linux-only: some plus packages produce platform-specific
+        # derivation metadata on macOS, causing the generated docs to differ from the
+        # Linux-committed docs/module-options.md. Run the check only on Linux.
+        (lib.genAttrs [ "aarch64-linux" "x86_64-linux" ] (
           system:
           let
             pkgs = import nixpkgs {
